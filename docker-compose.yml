@@ -1,0 +1,24 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_DATABASE: test
+    networks:
+      - backend
+    volumes:
+      - "./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql"
+
+  rabbit:
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672
+      - 5672:5672
+    networks:
+      - backend
+
+networks:
+  backend:
