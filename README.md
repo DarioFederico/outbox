@@ -1,6 +1,13 @@
 # Outbox pattern
+
 ### Proyect structure
-- cmd: contain the main entrypoint
+- config: process configuration using .env (viper)
+- cmd: main entrypoint
+- docs: swagger files
+- db: schemas for MySQL 
+- internal
+ - application: configure cateogry modules (controllers, handlers, jobs)
+ - infrastructure: configure MySQL, Rabbit, Logs
 
 ### Desing system
 Design outbox pattern in go
