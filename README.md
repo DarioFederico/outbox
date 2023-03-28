@@ -6,8 +6,8 @@
 - docs: swagger files
 - db: schemas for MySQL 
 - internal
- - application: configure cateogry modules (controllers, handlers, jobs)
- - infrastructure: configure MySQL, Rabbit, Logs
+  - application: configure cateogry modules (controllers, handlers, jobs)
+  - infrastructure: configure MySQL, Rabbit, Logs
 
 ### Desing system
 Design outbox pattern in go
